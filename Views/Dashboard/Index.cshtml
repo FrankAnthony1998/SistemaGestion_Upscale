@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Perfil de Usuario";
+}
+
+<div class="d-flex flex-column vh-100">
+    
+    <header class="p-2 text-white shadow-sm" style="background-color: #7D0E12;">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <span class="fw-bold">SISTEMA DE GESTIÓN</span>
+            <div class="d-flex align-items-center">
+
+            </div>
+        </div>
+    </header>
+
+    <div class="d-flex flex-grow-1">
+
+        <main class="flex-grow-1 p-4 bg-white">
+            <h4 class="fw-bold mb-4">Perfil de usuario</h4>
+
+            <div class="card border shadow-sm" style="border-radius: 10px;">
+                <div class="card-body p-4">
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 70px; height: 70px;">
+                            <i class="bi bi-person-fill text-white fs-1"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0">@User.Identity.Name</h5>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="text-muted small d-block">Tipo de Documento</label>
+                            <span class="fw-bold">DNI</span>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="text-muted small d-block">Nombres</label>
+                            <span class="fw-bold">Frank Anthony</span>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="text-muted small d-block">Nacionalidad</label>
+                            <span class="fw-bold">Peruana</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

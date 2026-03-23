@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Gestión de Usuarios";
+}
+
+<div class="container-fluid vh-100 d-flex flex-column p-0">
+    <header class="bg-danger text-white p-2 shadow-sm" style="background-color: #7D0E12 !important;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="fw-bold">SISTEMA DE GESTIÓN</span>
+            <span class="fs-4">?</span>
+        </div>
+    </header>
+
+    <div class="flex-grow-1 d-flex align-items-center justify-content-center bg-light">
+        
+        <div class="card shadow-lg border-0" style="width: 24rem; border-radius: 15px;">
+            <div class="card-body p-4">
+
+                <h5 class="card-title text-center mb-4 text-secondary">Inicia sesión con tu cuenta</h5>
+
+                @if (ViewBag.Mensaje != null)
+                {
+                    <div class="alert alert-danger d-flex align-items-center py-2" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        <small>@ViewBag.Mensaje</small>
+                    </div>
+                }
+
+                <form asp-action="Index" method="post">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Usuario</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0 text-muted">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <input type="text" name="email" class="form-control border-start-0" 
+                                   placeholder="Ingresa usuario" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0 text-muted">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input type="password" name="password" class="form-control border-start-0" 
+                                   placeholder="Ingresa contraseña" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2 shadow-sm" 
+                            style="background-color: #00448d; border: none;">
+                        Ingresar
+                    </button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
