@@ -52,3 +52,42 @@
         </main>
     </div>
 </div>
+
+<div class="modal fade" id="modalExpiracion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 15px;">
+            <div class="modal-body p-4" style="background-color: #fdf7e1; border-radius: 15px;">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-exclamation-triangle-fill text-warning fs-2 me-3"></i>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Su sesión está a punto de expirar</h6>
+                        <p class="text-muted mb-3" style="font-size: 0.85rem;">
+                            Por seguridad, su sesión expirará en unos segundos. Para continuar, seleccione "Extender sesión".
+                        </p>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-warning btn-sm fw-bold px-4 text-white" 
+                                    style="background-color: #f39c12; border: none;" 
+                                    onclick="location.reload();">
+                                Extender sesión
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        setTimeout(function () {
+            var modalElement = document.getElementById('modalExpiracion');
+            var myModal = new bootstrap.Modal(modalElement);
+            myModal.show();
+        }, 45000); 
+
+        setTimeout(function () {
+            window.location.href = '/Login/Index';
+        }, 61000);
+    </script>
+}

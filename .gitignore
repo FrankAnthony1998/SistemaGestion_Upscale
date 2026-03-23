@@ -1,0 +1,19 @@
+## Visual Studio & .NET
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esults/
+.vs/
+.vscode/
+
+## User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+## SQL Server files
+*.mdf
+*.ldf
+
+## OS files
+.DS_Store
+Thumbs.db
